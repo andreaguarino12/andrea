@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Andrea Guarino · DevOps & IT Specialist</title>
+    <!-- Font Awesome 6 (icone) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts (Inter + Space Grotesk) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Particles.js per effetto particelle -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- CSS esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MODERN MINIMAL PAGE LOADER -->
+<div class="page-loader-modern">
+    <div class="loader-line"></div>
+    <div class="loader-circle"></div>
+</div>
+
+<!-- PRIMA PARTE: SFONDO DEDICATO (back.gif) -->
+<section class="hero-full">
+    <div class="hero-gif"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Indicatore scroll animato (verrà nascosto su mobile) -->
+    <div class="scroll-indicator">
+        <div class="mouse"><div class="wheel"></div></div>
+        <span>scrolla</span>
+    </div>
+
+    <div class="hero-content">
+        <div class="avatar-wrapper">
+            <!-- Foto profilo pfp.jpeg - senza scritta foto -->
+            <div class="avatar-image" style="background-image: url('pfp.jpeg');"></div>
+        </div>
+        <!-- Titolo con effetto premium -->
+        <h1 class="premium-title glitch" data-text="Andrea Guarino">Andrea Guarino</h1>
+        <div class="professional-roles">DevOps Specialist · IT Specialist</div>
+        <p class="bio">
+            Appassionato di automazione, infrastrutture cloud e sviluppo su misura.<br>
+            Unisco competenze da sistemista e sviluppatore per creare soluzioni solide e scalabili.
+        </p>
+    </div>
+</section>
+
+<!-- Contenitore particelle - solo nella sezione centrale -->
+<div id="particles-js"></div>
+
+<!-- Luce che segue il mouse (verrà nascosta su mobile) -->
+<div class="mouse-light"></div>
+
+<!-- RESTO DELLA PAGINA -->
+<main class="main-content">
+    <div class="container">
+        <!-- Esperienze -->
+        <div class="fade-up">
+            <h2 class="section-title"><i class="fa-regular fa-briefcase"></i> Percorso professionale <span class="title-glow"></span></h2>
+            
+            <div class="exp-item card-3d">
+                <div class="date-badge"><i class="fa-regular fa-calendar"></i> mag 2025 – Presente · 10 mesi</div>
+                <div class="exp-header">
+                    <h3 class="company">DevOps Specialist <span>@ RTC S.P.A.</span></h3>
+                    <span class="location"><i class="fa-regular fa-building"></i> Verona · In sede</span>
+                </div>
+                <p class="exp-description">Gestione sistemi containerizzati, pipeline CI/CD, orchestrazione e ottimizzazione performance.</p>
+                <div class="skill-group">
+                    <span class="skill-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+                    <span class="skill-chip"><i class="fa-solid fa-diagram-project"></i> n8n & automazione</span>
+                    <span class="skill-chip"><i class="fa-solid fa-cloud"></i> Cloud</span>
+                    <span class="skill-chip"><i class="fa-solid fa-gear"></i> Linux</span>
+                    <span class="skill-chip"><i class="fa-solid fa-network-wired"></i> Kubernetes</span>
+                    <span class="skill-chip"><i class="fa-solid fa-terminal"></i> scripting</span>
+                </div>
+            </div>
+
+            <div class="exp-item card-3d">
+                <div class="date-badge"><i class="fa-regular fa-calendar"></i> gen 2023 – Presente · 3 anni 2 mesi</div>
+                <div class="exp-header">
+                    <h3 class="company">Tecnico di supporto IT <span>@ Studio Legale Talamini · De Thomasis</span></h3>
+                    <span class="location"><i class="fa-regular fa-building"></i> Legnago · Ibrida</span>
+                </div>
+                <p class="exp-description">Sviluppo gestionali personalizzati, supporto a 360° e manutenzione sistemi. Assistenza a chiamata.</p>
+                <div class="skill-group">
+                    <span class="skill-chip"><i class="fa-solid fa-code"></i> Gestionale su misura</span>
+                    <span class="skill-chip"><i class="fa-solid fa-headset"></i> Supporto tecnico</span>
+                    <span class="skill-chip"><i class="fa-solid fa-database"></i> Database</span>
+                    <span class="skill-chip"><i class="fa-solid fa-laptop"></i> Assistenza IT</span>
+                    <span class="skill-chip"><i class="fa-solid fa-chart-line"></i> Automazione</span>
+                </div>
+            </div>
+
+            <div class="exp-item card-3d">
+                <div class="date-badge"><i class="fa-regular fa-calendar"></i> lug 2019 – Presente · 6 anni 8 mesi</div>
+                <div class="exp-header">
+                    <h3 class="company">Servizi IT · Libero professionista</h3>
+                    <span class="location"><i class="fa-regular fa-building"></i> Legnago · Ibrida</span>
+                </div>
+                <p class="exp-description">Sviluppo siti web (primo progetto nel 2019 per poliambulatorio), hosting e gestione su server personale. Attività secondaria.</p>
+                <div class="skill-group">
+                    <span class="skill-chip"><i class="fa-brands fa-wordpress"></i> Siti web</span>
+                    <span class="skill-chip"><i class="fa-solid fa-server"></i> Server dedicato</span>
+                    <span class="skill-chip"><i class="fa-solid fa-globe"></i> Hosting</span>
+                    <span class="skill-chip"><i class="fa-regular fa-file-code"></i> Sviluppo full-stack</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGETTI -->
+        <div class="fade-up delay-1">
+            <h2 class="section-title"><i class="fa-regular fa-folder-open"></i> Progetti · link · realizzazioni <span class="title-glow"></span></h2>
+            <p style="color:rgba(255,255,255,0.8); margin-bottom: 2rem;">Primo sito per poliambulatorio (2019) e repository pubblici. <span style="background: rgba(255,255,255,0.1); padding:0.2rem 1rem; border-radius:30px;"><i class="fa-regular fa-camera"></i> possibilità foto</span></p>
+
+            <div class="project-grid">
+                <!-- Progetto 1: Shop vetrina online privato con foto centrate -->
+                <div class="project-item card-3d">
+                    <div class="project-icon"><i class="fa-regular fa-store"></i></div>
+                    <h4>Shop vetrina online privato</h4>
+                    <p>Vetrina digitale per collezione privata con autenticazione e area riservata.</p>
+                    <!-- Spazio per 3 foto in rotazione (ingrandite e centrate) -->
+                    <div class="photo-rotation enlarged">
+                        <div class="rotation-container">
+                            <div class="rotation-track">
+                                <div class="rotation-slide">
+                                    <div class="photo-image" style="background-image: url('foto1.png');"></div>
+                                </div>
+                                <div class="rotation-slide">
+                                    <div class="photo-image" style="background-image: url('foto2.png');"></div>
+                                </div>
+                                <div class="rotation-slide">
+                                    <div class="photo-image" style="background-image: url('foto3.png');"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rotation-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">Scopri <i class="fa-regular fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Progetto 2: Gestionale LexOffice -->
+                <div class="project-item card-3d">
+                    <div class="project-icon"><i class="fa-regular fa-scale-balanced"></i></div>
+                    <h4>Gestionale LexOffice</h4>
+                    <p>App su misura per studio legale: appuntamenti, scadenze, fatturazione.</p>
+                    <a href="#" class="project-link">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Progetto 3: Self-hosted cloud -->
+                <div class="project-item card-3d">
+                    <div class="project-icon"><i class="fa-regular fa-box"></i></div>
+                    <h4>Self-hosted cloud</h4>
+                    <p>Server personale con Nextcloud, Git e automazione docker per hosting.</p>
+                    <a href="#" class="project-link">Repo <i class="fa-regular fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Progetto 4: Pipeline as Code -->
+                <div class="project-item card-3d">
+                    <div class="project-icon"><i class="fa-regular fa-rotate"></i></div>
+                    <h4>Pipeline as Code</h4>
+                    <p>Template CI/CD per microservizi con GitHub Actions e Docker.</p>
+                    <a href="#" class="project-link">Guarda <i class="fa-regular fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Bottone Altri Progetti -->
+            <div class="more-projects-container">
+                <a href="progetti.html" class="more-projects-btn">
+                    <span>Altri Progetti</span>
+                    <i class="fa-regular fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="freelance-note">
+                <i class="fa-solid fa-server"></i> Infrastruttura hosting personale: server dedicati, domini e manutenzione.
+            </div>
+        </div>
+
+        <!-- NUOVA SEZIONE: BARRE DINAMICHE + SFERA 3D A PUNTI + STATISTICHE -->
+        <div class="stats-knowledge-section fade-up delay-2">
+            <h2 class="section-title"><i class="fa-regular fa-chart-bar"></i> Competenze e risultati <span class="title-glow"></span></h2>
+            
+            <div class="knowledge-grid">
+                <!-- Colonna sinistra: barre dinamiche -->
+                <div class="progress-bars-col">
+                    <h3>Conoscenze tecniche</h3>
+                    <div class="progress-item">
+                        <div class="progress-label"><span>Docker / Kubernetes</span> <span class="progress-percent" data-target="100">100%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label"><span>n8n & Automazione</span> <span class="progress-percent" data-target="100">100%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label"><span>Cloud (AWS/OVH)</span> <span class="progress-percent" data-target="100">100%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Colonna centrale: sfera 3D a punti (point cloud) con bottoni -->
+                <div class="sphere-col">
+                    <h3>Sfera delle conoscenze</h3>
+                    <div class="sphere-container">
+                        <canvas id="sphereCanvas" width="300" height="300"></canvas>
+                        <div class="sphere-controls">
+                            <button class="sphere-btn" id="rotate-sphere">
+                                <i class="fas fa-sync-alt"></i> Ruota Sfera
+                            </button>
+                            <button class="sphere-btn" id="explode-sphere">
+                                <i class="fas fa-expand-alt"></i> Esplodi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonna destra: statistiche aggiornate -->
+                <div class="stats-col">
+                    <h3>In numeri</h3>
+                    <div class="stat-item counter-item">
+                        <div class="stat-number" data-target="10">10</div>
+                        <div class="stat-label"><i class="fa-regular fa-users"></i> clienti soddisfatti</div>
+                    </div>
+                    <div class="stat-item counter-item">
+                        <div class="stat-number" data-target="18">18</div>
+                        <div class="stat-label"><i class="fa-regular fa-file-lines"></i> progetti completati</div>
+                    </div>
+                    <div class="stat-item counter-item">
+                        <div class="stat-number" data-target="6">6</div>
+                        <div class="stat-label"><i class="fa-regular fa-calendar"></i> anni di esperienza</div>
+                    </div>
+                    <div class="stat-item counter-item">
+                        <div class="stat-number" data-target="2">2</div>
+                        <div class="stat-label"><i class="fa-regular fa-certificate"></i> certificazioni</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Extra skills -->
+        <div class="extra-skills fade-up delay-3">
+            <div class="skill-pill"><i class="fa-brands fa-docker"></i> <strong>Docker · Kubernetes</strong></div>
+            <div class="skill-pill"><i class="fa-solid fa-code"></i> <strong>Python · Bash · JavaScript</strong></div>
+            <div class="skill-pill"><i class="fa-solid fa-cloud"></i> <strong>AWS · OVH · On‑premise</strong></div>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER con contatti aggiornati -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-copy">
+            <i class="fa-regular fa-copyright"></i> 2026 Andrea Guarino · Tutti i diritti riservati
+        </div>
+        <div class="footer-contacts">
+            <div class="contact-item">
+                <i class="fa-regular fa-envelope fa-shake"></i> andrea.guarino2002@gmail.com
+                <span class="contact-tooltip">Clicca per scrivermi <i class="fa-regular fa-paper-plane"></i></span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone fa-shake"></i> +39 3494088329
+                <span class="contact-tooltip">Chiamami <i class="fa-regular fa-bell"></i></span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin fa-shake"></i> linkedin.com/in/andrea-guarino-aa3757307
+                <span class="contact-tooltip">Visita il mio profilo <i class="fa-regular fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-github fa-shake"></i> github.com/andreaguarino12
+                <span class="contact-tooltip">Guarda i miei progetti <i class="fa-regular fa-code"></i></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Script esterno -->
+<script src="script.js"></script>
+</body>
+</html>
