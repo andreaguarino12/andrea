@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Andrea Guarino · DevOps & IT Specialist</title>
+    <meta name="description" content="Sito personale di Andrea Guarino: esperienza DevOps, progetti IT, automazione e contatti professionali.">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="canonical" href="https://andreaguarino12.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Andrea Guarino · DevOps & IT Specialist">
+    <meta property="og:description" content="Sito personale di Andrea Guarino: esperienza DevOps, progetti IT, automazione e contatti professionali.">
     <!-- Font Awesome 6 (icone) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts (Inter + Space Grotesk) -->
@@ -21,8 +27,25 @@
     <div class="loader-circle"></div>
 </div>
 
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVBAR STICKY -->
+<header class="top-nav" id="top-nav">
+    <div class="top-nav-inner">
+        <a href="#home" class="brand-link magnetic-btn">AG</a>
+        <nav class="top-nav-links" aria-label="Navigazione principale">
+            <a href="#esperienze" class="nav-link active">Esperienze</a>
+            <a href="#progetti" class="nav-link">Progetti</a>
+            <a href="#competenze" class="nav-link">Competenze</a>
+            <a href="#contatti" class="nav-link">Contatti</a>
+        </nav>
+        <div class="nav-live-badge" aria-live="polite"><span class="live-dot"></span><span id="live-status-text">SYSTEM ONLINE</span></div>
+        <a href="mailto:andrea.guarino2002@gmail.com?subject=Nuovo%20progetto" class="nav-cta magnetic-btn">Prenota call</a>
+    </div>
+</header>
+
 <!-- PRIMA PARTE: SFONDO DEDICATO (back.gif) -->
-<section class="hero-full">
+<section class="hero-full" id="home">
     <div class="hero-gif"></div>
     <div class="hero-overlay"></div>
 
@@ -35,7 +58,7 @@
     <div class="hero-content">
         <div class="avatar-wrapper">
             <!-- Foto profilo pfp.jpeg - senza scritta foto -->
-            <div class="avatar-image" style="background-image: url('pfp.jpeg');"></div>
+            <div class="avatar-image lazy-bg" data-bg="pfp.jpeg"></div>
         </div>
         <!-- Titolo con effetto premium -->
         <h1 class="premium-title glitch" data-text="Andrea Guarino">Andrea Guarino</h1>
@@ -44,20 +67,21 @@
             Appassionato di automazione, infrastrutture cloud e sviluppo su misura.<br>
             Unisco competenze da sistemista e sviluppatore per creare soluzioni solide e scalabili.
         </p>
+        <div class="hero-terminal-line">$ deploy --env production --status <span id="deploy-status">running</span></div>
     </div>
 </section>
 
 <!-- Contenitore particelle - solo nella sezione centrale -->
-<div id="particles-js"></div>
+<div id="particles-js" aria-hidden="true"></div>
 
 <!-- Luce che segue il mouse (verrà nascosta su mobile) -->
-<div class="mouse-light"></div>
+<div class="mouse-light" aria-hidden="true"></div>
 
 <!-- RESTO DELLA PAGINA -->
 <main class="main-content">
     <div class="container">
         <!-- Esperienze -->
-        <div class="fade-up">
+        <div class="fade-up" id="esperienze" data-section="esperienze">
             <h2 class="section-title"><i class="fa-regular fa-briefcase"></i> Percorso professionale <span class="title-glow"></span></h2>
             
             <div class="exp-item card-3d">
@@ -110,7 +134,7 @@
         </div>
 
         <!-- PROGETTI -->
-        <div class="fade-up delay-1">
+        <div class="fade-up delay-1" id="progetti" data-section="progetti">
             <h2 class="section-title"><i class="fa-regular fa-folder-open"></i> Progetti · link · realizzazioni <span class="title-glow"></span></h2>
             <p style="color:rgba(255,255,255,0.8); margin-bottom: 2rem;">Primo sito per poliambulatorio (2019) e repository pubblici. <span style="background: rgba(255,255,255,0.1); padding:0.2rem 1rem; border-radius:30px;"><i class="fa-regular fa-camera"></i> possibilità foto</span></p>
 
@@ -125,13 +149,13 @@
                         <div class="rotation-container">
                             <div class="rotation-track">
                                 <div class="rotation-slide">
-                                    <div class="photo-image" style="background-image: url('foto1.png');"></div>
+                                    <div class="photo-image lazy-bg" data-bg="foto1.png"></div>
                                 </div>
                                 <div class="rotation-slide">
-                                    <div class="photo-image" style="background-image: url('foto2.png');"></div>
+                                    <div class="photo-image lazy-bg" data-bg="foto2.png"></div>
                                 </div>
                                 <div class="rotation-slide">
-                                    <div class="photo-image" style="background-image: url('foto3.png');"></div>
+                                    <div class="photo-image lazy-bg" data-bg="foto3.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +165,7 @@
                             <span class="dot"></span>
                         </div>
                     </div>
-                    <a href="#" class="project-link">Scopri <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="progetti.html#project-damm" class="project-link">Scopri <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Progetto 2: Gestionale LexOffice -->
@@ -149,7 +173,7 @@
                     <div class="project-icon"><i class="fa-regular fa-scale-balanced"></i></div>
                     <h4>Gestionale LexOffice</h4>
                     <p>App su misura per studio legale: appuntamenti, scadenze, fatturazione.</p>
-                    <a href="#" class="project-link">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="progetti.html#project-workout" class="project-link">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Progetto 3: Self-hosted cloud -->
@@ -157,7 +181,7 @@
                     <div class="project-icon"><i class="fa-regular fa-box"></i></div>
                     <h4>Self-hosted cloud</h4>
                     <p>Server personale con Nextcloud, Git e automazione docker per hosting.</p>
-                    <a href="#" class="project-link">Repo <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="progetti.html#project-cloud" class="project-link">Repo <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Progetto 4: Pipeline as Code -->
@@ -165,7 +189,7 @@
                     <div class="project-icon"><i class="fa-regular fa-rotate"></i></div>
                     <h4>Pipeline as Code</h4>
                     <p>Template CI/CD per microservizi con GitHub Actions e Docker.</p>
-                    <a href="#" class="project-link">Guarda <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="progetti.html#project-automation" class="project-link">Guarda <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -183,7 +207,7 @@
         </div>
 
         <!-- NUOVA SEZIONE: BARRE DINAMICHE + SFERA 3D A PUNTI + STATISTICHE -->
-        <div class="stats-knowledge-section fade-up delay-2">
+        <div class="stats-knowledge-section fade-up delay-2" id="competenze" data-section="competenze">
             <h2 class="section-title"><i class="fa-regular fa-chart-bar"></i> Competenze e risultati <span class="title-glow"></span></h2>
             
             <div class="knowledge-grid">
@@ -191,16 +215,16 @@
                 <div class="progress-bars-col">
                     <h3>Conoscenze tecniche</h3>
                     <div class="progress-item">
-                        <div class="progress-label"><span>Docker / Kubernetes</span> <span class="progress-percent" data-target="100">100%</span></div>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                        <div class="progress-label"><span>Docker / Kubernetes</span> <span class="progress-percent" data-target="95">95%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="95" style="width: 0%;"></div></div>
                     </div>
                     <div class="progress-item">
-                        <div class="progress-label"><span>n8n & Automazione</span> <span class="progress-percent" data-target="100">100%</span></div>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                        <div class="progress-label"><span>n8n & Automazione</span> <span class="progress-percent" data-target="92">92%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="92" style="width: 0%;"></div></div>
                     </div>
                     <div class="progress-item">
-                        <div class="progress-label"><span>Cloud (AWS/OVH)</span> <span class="progress-percent" data-target="100">100%</span></div>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="100" style="width: 100%;"></div></div>
+                        <div class="progress-label"><span>Cloud (AWS/OVH)</span> <span class="progress-percent" data-target="90">90%</span></div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" data-percent="90" style="width: 0%;"></div></div>
                     </div>
                 </div>
 
@@ -254,6 +278,16 @@
     </div>
 </main>
 
+
+<section class="final-cta fade-up" id="contatti" data-section="contatti">
+    <h3>Hai un progetto in mente?</h3>
+    <p>Collaboro su automazione, infrastrutture cloud e sviluppo su misura per professionisti e aziende.</p>
+    <div class="final-cta-actions">
+        <a href="mailto:andrea.guarino2002@gmail.com?subject=Richiesta%20consulenza" class="nav-cta magnetic-btn">Contattami ora</a>
+        <a href="progetti.html" class="more-projects-btn magnetic-btn">Vedi portfolio completo</a>
+    </div>
+</section>
+
 <!-- FOOTER con contatti aggiornati -->
 <footer class="site-footer">
     <div class="footer-content">
@@ -261,22 +295,22 @@
             <i class="fa-regular fa-copyright"></i> 2026 Andrea Guarino · Tutti i diritti riservati
         </div>
         <div class="footer-contacts">
-            <div class="contact-item">
-                <i class="fa-regular fa-envelope fa-shake"></i> andrea.guarino2002@gmail.com
-                <span class="contact-tooltip">Clicca per scrivermi <i class="fa-regular fa-paper-plane"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-phone fa-shake"></i> +39 3494088329
-                <span class="contact-tooltip">Chiamami <i class="fa-regular fa-bell"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-linkedin fa-shake"></i> linkedin.com/in/andrea-guarino-aa3757307
-                <span class="contact-tooltip">Visita il mio profilo <i class="fa-regular fa-arrow-up-right-from-square"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-github fa-shake"></i> github.com/andreaguarino12
-                <span class="contact-tooltip">Guarda i miei progetti <i class="fa-regular fa-code"></i></span>
-            </div>
+            <a class="contact-item" href="mailto:andrea.guarino2002@gmail.com" aria-label="Invia una email ad Andrea Guarino">
+                <i class="fa-regular fa-envelope fa-shake" aria-hidden="true"></i> andrea.guarino2002@gmail.com
+                <span class="contact-tooltip">Clicca per scrivermi <i class="fa-regular fa-paper-plane" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="tel:+393494088329" aria-label="Chiama Andrea Guarino">
+                <i class="fa-solid fa-phone fa-shake" aria-hidden="true"></i> +39 3494088329
+                <span class="contact-tooltip">Chiamami <i class="fa-regular fa-bell" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/andrea-guarino-aa3757307" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo LinkedIn di Andrea Guarino">
+                <i class="fa-brands fa-linkedin fa-shake" aria-hidden="true"></i> linkedin.com/in/andrea-guarino-aa3757307
+                <span class="contact-tooltip">Visita il mio profilo <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="https://github.com/andreaguarino12" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo GitHub di Andrea Guarino">
+                <i class="fa-brands fa-github fa-shake" aria-hidden="true"></i> github.com/andreaguarino12
+                <span class="contact-tooltip">Guarda i miei progetti <i class="fa-regular fa-code" aria-hidden="true"></i></span>
+            </a>
         </div>
     </div>
 </footer>
