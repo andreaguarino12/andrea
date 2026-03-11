@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Andrea Guarino · Progetti</title>
+    <meta name="description" content="Portfolio progetti di Andrea Guarino: web app, automazione, self-hosted, hardware e software su misura.">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="canonical" href="https://andreaguarino12.github.io/progetti.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Andrea Guarino · Progetti">
+    <meta property="og:description" content="Portfolio progetti di Andrea Guarino: web app, automazione, self-hosted, hardware e software su misura.">
     <!-- Font Awesome 6 (icone) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts (Inter + Space Grotesk) -->
@@ -438,10 +444,10 @@
 <body>
 
 <!-- Sfondo dinamico specifico per la pagina progetti (parte dall'inizio) -->
-<div id="particles-js" style="top: 0; bottom: auto; height: 100%;"></div>
+<div id="particles-js" style="top: 0; bottom: auto; height: 100%;" aria-hidden="true"></div>
 
 <!-- Luce che segue il mouse -->
-<div class="mouse-light"></div>
+<div class="mouse-light" aria-hidden="true"></div>
 
 <!-- CONTENUTO PRINCIPALE -->
 <main class="main-content">
@@ -459,10 +465,19 @@
         </div>
         
         <!-- Griglia progetti -->
+        <div class="project-filters fade-up">
+            <button class="filter-chip active magnetic-btn" data-filter="all">Tutti</button>
+            <button class="filter-chip magnetic-btn" data-filter="web">Web</button>
+            <button class="filter-chip magnetic-btn" data-filter="devops">DevOps</button>
+            <button class="filter-chip magnetic-btn" data-filter="automation">Automation</button>
+            <button class="filter-chip magnetic-btn" data-filter="hardware">Hardware</button>
+            <button class="filter-chip magnetic-btn" data-filter="ai">AI</button>
+        </div>
+
         <div class="projects-grid">
             
             <!-- Progetto 1: DAMMN Project (con link e foto) -->
-            <div class="project-card-full fade-up card-3d">
+            <div class="project-card-full fade-up card-3d" id="project-damm" data-tags="hardware devops automation">
                 <div class="project-header">
                     <h3>DAMMN Project</h3>
                     <span class="project-badge">GPS Offline</span>
@@ -472,13 +487,13 @@
                         <div class="project-rotation-container">
                             <div class="project-rotation-track">
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('damn1.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="damn1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('damn2.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="damn2.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('damn3.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="damn3.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -504,18 +519,18 @@
                 </div>
                 
                 <!-- Link cliccabile per DAMMN Project -->
-                <a href="https://andreaguarino12.github.io/DAMMN/" target="_blank" class="project-direct-link">
+                <a href="https://andreaguarino12.github.io/DAMMN/" target="_blank" rel="noopener noreferrer" class="project-direct-link">
                     <i class="fa-brands fa-github"></i> andreaguarino12.github.io/DAMMN/
                 </a>
                 
                 <div class="project-footer">
                     <span class="project-status status-completato"><i class="fa-solid fa-circle"></i> Completato</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="https://andreaguarino12.github.io/DAMMN/" target="_blank" rel="noopener noreferrer" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Progetto 2: Sito web palestra (con foto e tabella) -->
-            <div class="project-card-full fade-up delay-1 card-3d">
+            <div class="project-card-full fade-up delay-1 card-3d" id="project-workout" data-tags="web">
                 <div class="project-header">
                     <h3>Palestra Web App</h3>
                     <span class="project-badge">Full-Stack</span>
@@ -526,13 +541,13 @@
                         <div class="project-rotation-container">
                             <div class="project-rotation-track">
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('gym1.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="gym1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('gym2.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="gym2.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('gym3.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="gym3.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -566,18 +581,18 @@
                 </div>
                 
                 <!-- Link cliccabile per Palestra -->
-                <a href="https://andreaguarino12.github.io/palestra/" target="_blank" class="project-direct-link">
+                <a href="https://andreaguarino12.github.io/palestra/" target="_blank" rel="noopener noreferrer" class="project-direct-link">
                     <i class="fa-regular fa-globe"></i> andreaguarino12.github.io/palestra/
                 </a>
                 
                 <div class="project-footer">
                     <span class="project-status status-completato"><i class="fa-solid fa-circle"></i> Completato</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="https://andreaguarino12.github.io/palestra/" target="_blank" rel="noopener noreferrer" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Progetto 3: Silver Lobby (in sviluppo, SENZA FOTO) -->
-            <div class="project-card-full fade-up delay-2 card-3d">
+            <div class="project-card-full fade-up delay-2 card-3d" id="project-cloud" data-tags="devops web">
                 <div class="project-header">
                     <h3>Silver Lobby</h3>
                     <span class="project-badge">Self-hosted</span>
@@ -608,12 +623,12 @@
                 </div>
                 <div class="project-footer">
                     <span class="project-status status-sviluppo"><i class="fa-solid fa-circle"></i> In sviluppo</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="mailto:andrea.guarino2002@gmail.com?subject=Richiesta%20dettagli%20-%20Self-hosted%20cloud" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Progetto 4: Colibrix Project (in sviluppo, con foto) -->
-            <div class="project-card-full fade-up delay-3 card-3d">
+            <div class="project-card-full fade-up delay-3 card-3d" id="project-automation" data-tags="ai automation devops">
                 <div class="project-header">
                     <h3>Colibrix Project</h3>
                     <span class="project-badge">AI · Self-hosted</span>
@@ -623,13 +638,13 @@
                         <div class="project-rotation-container">
                             <div class="project-rotation-track">
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('col1.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('col2.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('col3.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -652,12 +667,12 @@
                 </div>
                 <div class="project-footer">
                     <span class="project-status status-sviluppo"><i class="fa-solid fa-circle"></i> In sviluppo</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="mailto:andrea.guarino2002@gmail.com?subject=Richiesta%20dettagli%20-%20Pipeline%20as%20Code" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Progetto 5: Sviluppi hardware (completato, con foto) -->
-            <div class="project-card-full fade-up delay-1 card-3d">
+            <div class="project-card-full fade-up delay-1 card-3d" data-tags="hardware">
                 <div class="project-header">
                     <h3>Sviluppi Hardware</h3>
                     <span class="project-badge">PC & Server</span>
@@ -667,13 +682,13 @@
                         <div class="project-rotation-container">
                             <div class="project-rotation-track">
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('hardware1.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('hardware2.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                                 <div class="project-rotation-slide">
-                                    <div class="project-photo" style="background-image: url('hardware3.png');"></div>
+                                    <div class="project-photo lazy-bg" data-bg="col1.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -696,12 +711,12 @@
                 </div>
                 <div class="project-footer">
                     <span class="project-status status-completato"><i class="fa-solid fa-circle"></i> Completato</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="mailto:andrea.guarino2002@gmail.com?subject=Richiesta%20dettagli%20-%20Collezione%20privata" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
             <!-- Progetto 6: Scraping Bot (dismesso, SENZA FOTO) -->
-            <div class="project-card-full fade-up delay-2 card-3d">
+            <div class="project-card-full fade-up delay-2 card-3d" data-tags="automation">
                 <div class="project-header">
                     <h3>Scraping Bot</h3>
                     <span class="project-badge red">Dismesso</span>
@@ -729,7 +744,7 @@
                 </div>
                 <div class="project-footer">
                     <span class="project-status status-dismesso"><i class="fa-solid fa-circle"></i> Dismesso</span>
-                    <a href="#" class="project-link-btn">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
+                    <a href="mailto:andrea.guarino2002@gmail.com?subject=Richiesta%20dettagli%20-%20Laboratorio%20hardware" class="project-link-btn open-case-study">Dettagli <i class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
             
@@ -747,6 +762,16 @@
     </div>
 </main>
 
+
+<div class="case-study-modal" id="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="case-study-backdrop" data-close-modal></div>
+  <div class="case-study-content">
+    <button class="case-study-close" data-close-modal aria-label="Chiudi dettagli progetto">&times;</button>
+    <h3 id="case-study-title">Case study</h3>
+    <p id="case-study-body"></p>
+  </div>
+</div>
+
 <!-- FOOTER (identico alla home) -->
 <footer class="site-footer">
     <div class="footer-content">
@@ -754,85 +779,27 @@
             <i class="fa-regular fa-copyright"></i> 2026 Andrea Guarino · Tutti i diritti riservati
         </div>
         <div class="footer-contacts">
-            <div class="contact-item">
-                <i class="fa-regular fa-envelope fa-shake"></i> andrea.guarino2002@gmail.com
-                <span class="contact-tooltip">Clicca per scrivermi <i class="fa-regular fa-paper-plane"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-phone fa-shake"></i> +39 3494088329
-                <span class="contact-tooltip">Chiamami <i class="fa-regular fa-bell"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-linkedin fa-shake"></i> linkedin.com/in/andrea-guarino-aa3757307
-                <span class="contact-tooltip">Visita il mio profilo <i class="fa-regular fa-arrow-up-right-from-square"></i></span>
-            </div>
-            <div class="contact-item">
-                <i class="fa-brands fa-github fa-shake"></i> github.com/andreaguarino12
-                <span class="contact-tooltip">Guarda i miei progetti <i class="fa-regular fa-code"></i></span>
-            </div>
+            <a class="contact-item" href="mailto:andrea.guarino2002@gmail.com" aria-label="Invia una email ad Andrea Guarino">
+                <i class="fa-regular fa-envelope fa-shake" aria-hidden="true"></i> andrea.guarino2002@gmail.com
+                <span class="contact-tooltip">Clicca per scrivermi <i class="fa-regular fa-paper-plane" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="tel:+393494088329" aria-label="Chiama Andrea Guarino">
+                <i class="fa-solid fa-phone fa-shake" aria-hidden="true"></i> +39 3494088329
+                <span class="contact-tooltip">Chiamami <i class="fa-regular fa-bell" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/andrea-guarino-aa3757307" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo LinkedIn di Andrea Guarino">
+                <i class="fa-brands fa-linkedin fa-shake" aria-hidden="true"></i> linkedin.com/in/andrea-guarino-aa3757307
+                <span class="contact-tooltip">Visita il mio profilo <i class="fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+            </a>
+            <a class="contact-item" href="https://github.com/andreaguarino12" target="_blank" rel="noopener noreferrer" aria-label="Apri il profilo GitHub di Andrea Guarino">
+                <i class="fa-brands fa-github fa-shake" aria-hidden="true"></i> github.com/andreaguarino12
+                <span class="contact-tooltip">Guarda i miei progetti <i class="fa-regular fa-code" aria-hidden="true"></i></span>
+            </a>
         </div>
     </div>
 </footer>
 
 <!-- Script esterno -->
 <script src="script.js"></script>
-<script>
-    // Script specifico per la rotazione delle foto nei progetti
-    document.addEventListener('DOMContentLoaded', function() {
-        // Sincronizza i pallini con la rotazione delle foto
-        const projectRotations = document.querySelectorAll('.project-photo-rotation');
-        
-        projectRotations.forEach(rotation => {
-            const track = rotation.querySelector('.project-rotation-track');
-            const dots = rotation.querySelectorAll('.project-dot');
-            
-            if (track && dots.length) {
-                setInterval(() => {
-                    const transform = window.getComputedStyle(track).transform;
-                    let index = 0;
-                    
-                    if (transform !== 'none') {
-                        const matrix = transform.match(/matrix.*\((.+)\)/);
-                        if (matrix) {
-                            const values = matrix[1].split(', ');
-                            const translateX = parseFloat(values[4]) || 0;
-                            index = Math.round(Math.abs(translateX) / (track.clientWidth / 3));
-                        }
-                    }
-                    
-                    dots.forEach((dot, i) => {
-                        if (i === index) {
-                            dot.classList.add('active');
-                        } else {
-                            dot.classList.remove('active');
-                        }
-                    });
-                }, 500);
-            }
-        });
-        
-        // Effetto hover avanzato per le card
-        const cards = document.querySelectorAll('.project-card-full');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 30;
-                const rotateY = (centerX - x) / 30;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
-        });
-    });
-</script>
 </body>
 </html> 
