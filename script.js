@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatsCounter();
     initHomeRotationDots();
     initProjectPageEnhancements(isMobile, isTouchDevice);
+    initScrollProgress();
+    initLiveStatusTicker();
+    initHeroParallax(isMobile, isTouchDevice);
+    initClickRipples();
 
     const sphereCanvas = document.getElementById('sphereCanvas');
     if (sphereCanvas) initSphere(sphereCanvas);
@@ -366,6 +370,66 @@ function initCaseStudyModal() {
             modal.classList.remove('open');
             modal.setAttribute('aria-hidden', 'true');
         }
+    });
+}
+
+
+function initScrollProgress() {
+    const bar = document.querySelector('.scroll-progress');
+    if (!bar) return;
+    const update = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+        bar.style.width = `${pct}%`;
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+}
+
+function initLiveStatusTicker() {
+    const text = document.getElementById('live-status-text');
+    const deploy = document.getElementById('deploy-status');
+    const labels = ['SYSTEM ONLINE', 'CI/CD ACTIVE', 'SECURE MODE', 'LATENCY LOW'];
+    const deployLabels = ['running', 'stable', 'verified', 'completed'];
+    if (text) {
+        let i = 0;
+        setInterval(() => {
+            i = (i + 1) % labels.length;
+            text.textContent = labels[i];
+        }, 2200);
+    }
+    if (deploy) {
+        let j = 0;
+        setInterval(() => {
+            j = (j + 1) % deployLabels.length;
+            deploy.textContent = deployLabels[j];
+        }, 1800);
+    }
+}
+
+function initHeroParallax(isMobile, isTouchDevice) {
+    if (isMobile || isTouchDevice) return;
+    const hero = document.querySelector('.hero-content');
+    if (!hero) return;
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        hero.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    });
+}
+
+function initClickRipples() {
+    document.querySelectorAll('.nav-cta, .more-projects-btn, .filter-chip').forEach((el) => {
+        el.addEventListener('click', (e) => {
+            const r = document.createElement('span');
+            r.className = 'click-ripple';
+            const rect = el.getBoundingClientRect();
+            r.style.left = `${e.clientX - rect.left}px`;
+            r.style.top = `${e.clientY - rect.top}px`;
+            el.appendChild(r);
+            setTimeout(() => r.remove(), 500);
+        });
     });
 }
 
